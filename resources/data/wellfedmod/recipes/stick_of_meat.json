@@ -1,0 +1,9 @@
+{
+  "type": "smelting",
+  "ingredient": {
+    "item": "wellfedmod:stick_of_raw_meat"
+  },
+  "result": "wellfedmod:stick_of_meat",
+  "experience": 0.5,
+  "cookingtime": 150
+}

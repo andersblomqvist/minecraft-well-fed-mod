@@ -1,0 +1,6 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "wellfedmod:item/stick_of_raw_meat"
+    }
+}

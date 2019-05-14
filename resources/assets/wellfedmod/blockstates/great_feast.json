@@ -1,0 +1,11 @@
+{
+    "variants": {
+        "bites=0": { "model": "wellfedmod:block/great_feast" },
+        "bites=1": { "model": "wellfedmod:block/great_feast_slice1" },
+        "bites=2": { "model": "wellfedmod:block/great_feast_slice2" },
+        "bites=3": { "model": "wellfedmod:block/great_feast_slice3" },
+        "bites=4": { "model": "wellfedmod:block/great_feast_slice4" },
+        "bites=5": { "model": "wellfedmod:block/great_feast_slice5" },
+        "bites=6": { "model": "wellfedmod:block/great_feast_slice6" }
+    }
+}

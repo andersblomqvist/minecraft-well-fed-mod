@@ -1,0 +1,22 @@
+{
+    "textures": {
+        "particle": "wellfedmod:block/great_feast_side",
+        "bottom": "wellfedmod:block/great_feast_bottom",
+        "top": "wellfedmod:block/great_feast_top",
+        "side": "wellfedmod:block/great_feast_side",
+        "inside": "wellfedmod:block/great_feast_inner"
+    },
+    "elements": [
+        {   "from": [ 7, 0, 1 ],
+            "to": [ 15, 8, 15 ],
+            "faces": {
+                "down":  { "texture": "#bottom", "cullface": "down" },
+                "up":    { "texture": "#top" },
+                "north": { "texture": "#side" },
+                "south": { "texture": "#side" },
+                "west":  { "texture": "#inside" },
+                "east":  { "texture": "#side" }
+            }
+        }
+    ]
+}

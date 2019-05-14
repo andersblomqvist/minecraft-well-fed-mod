@@ -1,0 +1,25 @@
+{
+    "type": "crafting_shaped",
+    "pattern": [
+        "###",
+        "LBL",
+        "WWW"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:milk_bucket"
+        },
+        "L": {
+            "item": "wellfedmod:seafood_magnifique"
+        },
+        "B": {
+            "item": "wellfedmod:stick_of_meat"
+        },
+        "W": {
+            "item": "minecraft:wheat"
+        }
+    },
+    "result": {
+        "item": "wellfedmod:great_feast_item"
+    }
+}
