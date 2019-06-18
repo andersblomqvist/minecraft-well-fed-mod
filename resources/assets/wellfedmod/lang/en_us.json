@@ -5,7 +5,12 @@
 	"item.wellfedmod.uncooked_seafood": "Uncooked Seafood",
 	"item.wellfedmod.golden_stew": "Golden Stew",
 	"item.wellfedmod.great_feast_item": "Great Feast",
-	"item.wellfedmod.cookery_book": "Cookery Book",
+	"item.wellfedmod.bat_wing": "Bat Wing",
+	"item.wellfedmod.crispy_bat_wing": "Crispy Bat Wing",
+	"item.wellfedmod.squid_limb": "Squid Limb",
+	"item.wellfedmod.grilled_squid_limb": "Grilled Squid Limb",
+	"item.wellfedmod.cookery_book": "Recipe Book",
+	"item.wellfedmod.steves_book_of_cooking": "Steve's Lost Book of Cooking",
 	
 	"block.wellfedmod.great_feast": "Great Feast",
 	

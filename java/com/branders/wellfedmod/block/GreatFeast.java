@@ -1,5 +1,6 @@
 package com.branders.wellfedmod.block;
 
+import com.branders.wellfedmod.config.WellFedConfig;
 import com.branders.wellfedmod.lists.PotionList;
 import com.branders.wellfedmod.potion.WellFedPotionEffect;
 
@@ -22,8 +23,8 @@ public class GreatFeast extends BlockCake
 	public static final IntegerProperty BITES = BlockStateProperties.BITES_0_6;
 	protected static final VoxelShape[] field_196402_b = new VoxelShape[]{Block.makeCuboidShape(1.0D, 0.0D, 1.0D, 15.0D, 8.0D, 15.0D), Block.makeCuboidShape(3.0D, 0.0D, 1.0D, 15.0D, 8.0D, 15.0D), Block.makeCuboidShape(5.0D, 0.0D, 1.0D, 15.0D, 8.0D, 15.0D), Block.makeCuboidShape(7.0D, 0.0D, 1.0D, 15.0D, 8.0D, 15.0D), Block.makeCuboidShape(9.0D, 0.0D, 1.0D, 15.0D, 8.0D, 15.0D), Block.makeCuboidShape(11.0D, 0.0D, 1.0D, 15.0D, 8.0D, 15.0D), Block.makeCuboidShape(13.0D, 0.0D, 1.0D, 15.0D, 8.0D, 15.0D)};
 	
-	// 5 Min duration time
-	private int potionDurationTime = 12000;
+	// Get duration time from config
+	private int potionDurationTime = WellFedConfig.great_feast_buff_duration.get();
 	
 	// Amplifier or potion level
 	private int level = 0;

@@ -14,10 +14,10 @@ import net.minecraft.util.ResourceLocation;
 public class WellFedPotion extends Potion
 {
 	// Buff icon top right
-	private final ResourceLocation iconHUDTexture;
+	private ResourceLocation iconHUDTexture;
 	
 	// Buff icon in inventory
-	private final ResourceLocation iconInventoryTexture;
+	private ResourceLocation iconInventoryTexture;
 	
 	// Higher value = less frequent updates
 	private int rate = 100; 
@@ -29,6 +29,7 @@ public class WellFedPotion extends Potion
 	{
 		super(isBadEffectIn, liquidColorIn);
 		
+		// Get the HUD textures
 		iconHUDTexture = new ResourceLocation(WellFedMod.modid, "/textures/gui/well_fed_hud_icon.png");
 		iconInventoryTexture = new ResourceLocation(WellFedMod.modid, "/textures/gui/well_fed_inventory_icon.png");
 	}
@@ -58,21 +59,24 @@ public class WellFedPotion extends Potion
 		else
 			return true;
 	}
-	
+			
+	/**
+     * 	Called to draw the this Potion onto the player's inventory when it's active.
+     */
 	@Override
-	public void renderInventoryEffect(int x, int y, PotionEffect effect, Minecraft mc) 
+	public void renderInventoryEffect(PotionEffect effect, Gui gui, int x, int y, float z) 
 	{
-		if(mc.currentScreen != null)
-		{
-			mc.getTextureManager().bindTexture(iconInventoryTexture);
-			Gui.drawModalRectWithCustomSizedTexture(x - 8, y - 8, 0, 0, 32, 32, 48, 48);
-		}
+		Minecraft.getInstance().getTextureManager().bindTexture(iconInventoryTexture);
+		Gui.drawModalRectWithCustomSizedTexture(x - 8, y - 8, 0, 0, 32, 32, 48, 48);
 	}
 	
+	/**
+     * 	Called to draw the this Potion icon onto the player's ingame HUD when it's active.
+     */
 	@Override
-	public void renderHUDEffect(int x, int y, PotionEffect effect, Minecraft mc, float alpha) 
+	public void renderHUDEffect(PotionEffect effect, Gui gui, int x, int y, float z, float alpha)
 	{
-		mc.getTextureManager().bindTexture(iconHUDTexture);
+		Minecraft.getInstance().getTextureManager().bindTexture(iconHUDTexture);
 		Gui.drawModalRectWithCustomSizedTexture(x + 4, y + 4, 0, 0, 18, 18, 18, 18);
 	}
 	

@@ -1,0 +1,17 @@
+{
+    "type": "crafting_shaped",
+    "pattern": [
+        "###",
+        "#B#",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:wheat"
+        },
+        "B": {
+            "item": "minecraft:book"
+        }
+    },
+    "result": {"item": "wellfedmod:cookery_book"}
+}

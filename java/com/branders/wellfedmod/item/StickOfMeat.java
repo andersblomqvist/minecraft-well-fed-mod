@@ -1,5 +1,6 @@
 package com.branders.wellfedmod.item;
 
+import com.branders.wellfedmod.config.WellFedConfig;
 import com.branders.wellfedmod.lists.PotionList;
 import com.branders.wellfedmod.potion.WellFedPotionEffect;
 
@@ -20,7 +21,7 @@ public class StickOfMeat extends ItemFood
 	public static boolean meat = false;
 	
 	// 5 Min duration time
-	private int potionDurationTime = 12000;
+	private int potionDurationTime = WellFedConfig.stick_of_meat_buff_duration.get();
 	
 	// Amplifier or potion level
 	private int level = 0;					

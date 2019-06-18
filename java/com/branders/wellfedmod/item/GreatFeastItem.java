@@ -16,19 +16,17 @@ import net.minecraft.world.IWorld;
 
 public class GreatFeastItem extends Item 
 {
-	// Create a blockstate for the great feast block
 	private final IBlockState blockState;
 	
 	public GreatFeastItem(Properties properties) 
 	{
 		super(properties);
-		
-		// Get the great feast block
 		this.blockState = BlockList.great_feast.getDefaultState();
 	}
 	
 	/**
 	 * 	Called when we right click with the item
+	 * 	Places out the Great Feast Block
 	 */
 	@Override
 	public EnumActionResult onItemUse(ItemUseContext ctx) 

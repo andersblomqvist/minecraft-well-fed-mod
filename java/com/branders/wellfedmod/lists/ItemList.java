@@ -12,4 +12,12 @@ public class ItemList
 	
 	public static Item great_feast_item;
 	public static Item great_feast_block;
+	
+	public static Item bat_wing;
+	public static Item crispy_bat_wing;
+	public static Item squid_limb;
+	public static Item grilled_squid_limb;
+	
+	public static Item cookery_book;
+	public static Item steves_book_of_cooking;
 }
