@@ -5,21 +5,18 @@ import com.branders.wellfedmod.config.Config;
 import com.branders.wellfedmod.event.MobDropEvent;
 import com.branders.wellfedmod.gui.GuiCookeryBookPagesList;
 import com.branders.wellfedmod.item.CookeryBook;
-import com.branders.wellfedmod.item.GoldenStew;
+import com.branders.wellfedmod.item.DropBowlItem;
 import com.branders.wellfedmod.item.GreatFeastItem;
-import com.branders.wellfedmod.item.SeafoodMagnifique;
-import com.branders.wellfedmod.item.StickOfMeat;
 import com.branders.wellfedmod.lists.BlockList;
 import com.branders.wellfedmod.lists.ItemList;
-import com.branders.wellfedmod.lists.PotionList;
-import com.branders.wellfedmod.potion.WellFedPotion;
+import com.branders.wellfedmod.lists.EffectList;
+import com.branders.wellfedmod.lists.FoodList;
 
 import net.minecraft.block.Block;
-import net.minecraft.init.Blocks;
+import net.minecraft.block.Blocks;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemGroup;
-import net.minecraft.potion.Potion;
+import net.minecraft.potion.Effect;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
@@ -30,15 +27,15 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.loading.FMLPaths;
 
 /**
- * 	Vanilla friendly mod adding new foods to Minecraft Forge 1.13
+ * 	Vanilla friendly mod adding new foods to Minecraft Forge 1.14
  * 
  * 	@author Anders <Branders> Blomqvist
  * 		
  */
-@Mod("wellfedmod")
+@Mod(WellFedMod.MODID)
 public class WellFedMod
 {
-	public static final String modid = "wellfedmod";
+	public static final String MODID = "wellfedmod";
 
     public WellFedMod() 
     {
@@ -80,18 +77,18 @@ public class WellFedMod
 	 		itemRegistryEvent.getRegistry().registerAll
 	 		(
  				ItemList.stick_of_raw_meat = new Item(new Item.Properties().group(ItemGroup.FOOD)).setRegistryName(location("stick_of_raw_meat")),
- 				ItemList.stick_of_meat = new StickOfMeat(StickOfMeat.healAmount, StickOfMeat.saturation, StickOfMeat.meat, new Item.Properties().group(ItemGroup.FOOD)).setRegistryName(location("stick_of_meat")),
- 				
- 				ItemList.uncooked_seafood = new Item(new Item.Properties().group(ItemGroup.FOOD)).setRegistryName(location("uncooked_seafood")),
-				ItemList.seafood_magnifique = new SeafoodMagnifique(SeafoodMagnifique.healAmount, SeafoodMagnifique.saturation, SeafoodMagnifique.meat, new Item.Properties().group(ItemGroup.FOOD)).setRegistryName(location("seafood_magnifique")),
+	 			ItemList.stick_of_meat = new Item(new Item.Properties().group(ItemGroup.FOOD).food(FoodList.stick_of_meat)).setRegistryName(MODID, "stick_of_meat"),
+	 				
+				ItemList.uncooked_seafood = new Item(new Item.Properties().group(ItemGroup.FOOD)).setRegistryName(location("uncooked_seafood")),
+				ItemList.seafood_magnifique= new DropBowlItem(new Item.Properties().group(ItemGroup.FOOD).food(FoodList.seafood_magnifique)).setRegistryName(MODID, "seafood_magnifique"),
 				
 				ItemList.bat_wing = new Item(new Item.Properties().group(ItemGroup.FOOD)).setRegistryName(location("bat_wing")),
-				ItemList.crispy_bat_wing = new ItemFood(5, 0.1F, false, new Item.Properties().group(ItemGroup.FOOD)).setRegistryName(location("crispy_bat_wing")),
+				ItemList.crispy_bat_wing= new Item(new Item.Properties().group(ItemGroup.FOOD).food(FoodList.crispy_bat_wing)).setRegistryName(MODID, "crispy_bat_wing"),
 				
 				ItemList.squid_limb = new Item(new Item.Properties().group(ItemGroup.FOOD)).setRegistryName(location("squid_limb")),
-				ItemList.grilled_squid_limb = new ItemFood(5, 0.1F, false, new Item.Properties().group(ItemGroup.FOOD)).setRegistryName(location("grilled_squid_limb")),
+				ItemList.grilled_squid_limb = new Item(new Item.Properties().group(ItemGroup.FOOD).food(FoodList.grilled_squid_limb)).setRegistryName(MODID, "grilled_squid_limb"),
 				
-				ItemList.golden_stew = new GoldenStew(GoldenStew.healAmount, GoldenStew.saturation, GoldenStew.meat, new Item.Properties().group(ItemGroup.FOOD)).setRegistryName(location("golden_stew")),
+				ItemList.golden_stew = new DropBowlItem(new Item.Properties().group(ItemGroup.FOOD).food(FoodList.golden_stew)).setRegistryName(MODID, "golden_stew"),
 				
 				ItemList.cookery_book = new CookeryBook(new Item.Properties().group(ItemGroup.FOOD)).setRegistryName(location("cookery_book")),
 				// ItemList.steves_book_of_cooking = new StevesBookOfCooking(new Item.Properties().rarity(EnumRarity.RARE)).setRegistryName(location("steves_book_of_cooking")),
@@ -104,21 +101,18 @@ public class WellFedMod
 	 	 * 	Potion registry
 	 	 */
 		@SubscribeEvent
-		public static void onPotionsRegistry(final RegistryEvent.Register<Potion> potionRegistryEvent)
+		public static void onPotionsRegistry(final RegistryEvent.Register<Effect> potionRegistryEvent)
 		{
-			potionRegistryEvent.getRegistry().registerAll
-			(
-				PotionList.well_fed = (new WellFedPotion(false, 16262179)).setBeneficial().setRegistryName(location("well_fed"))
-			);
+			potionRegistryEvent.getRegistry().register(EffectList.well_fed.setRegistryName(MODID, "well_fed"));
 		}
 		
 		/**
 		 * 	Returns a new Resource Location with format: modid:name
-		 * 	Makes it easy to assign new RegistryNames
+		 * 	Makes it easy to assign new registry names
 		 */
         private static ResourceLocation location(String name)
         {
-        	return new ResourceLocation(modid, name);
+        	return new ResourceLocation(MODID, name);
         }
     }
 }

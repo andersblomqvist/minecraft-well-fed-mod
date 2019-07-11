@@ -34,7 +34,7 @@ public class GuiCookeryBookPagesList
 	private static void fillResourceLocationList(String path, String fileType, int MAX_PAGES, List<ResourceLocation> list)
 	{
 		for(int i = 0; i < MAX_PAGES; i++)
-			list.add(new ResourceLocation(WellFedMod.modid, path + i + fileType));
+			list.add(new ResourceLocation(WellFedMod.MODID, path + i + fileType));
 	}
 	
 	/**

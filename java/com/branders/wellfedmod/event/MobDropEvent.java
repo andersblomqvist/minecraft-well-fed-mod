@@ -7,7 +7,7 @@ import com.branders.wellfedmod.lists.ItemList;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
-import net.minecraft.entity.item.EntityItem;
+import net.minecraft.entity.item.ItemEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.event.entity.living.LivingDropsEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -62,6 +62,6 @@ public class MobDropEvent
 	 */
 	private void addDrop(ItemStack itemStack, LivingDropsEvent event, Entity entity)
 	{
-		event.getDrops().add(new EntityItem(entity.world, entity.posX, entity.posY, entity.posZ, itemStack));
+		event.getDrops().add(new ItemEntity(entity.world, entity.posX, entity.posY, entity.posZ, itemStack));
 	}
 }
