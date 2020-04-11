@@ -14,19 +14,18 @@ import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IWorld;
 
-public class GreatFeastItem extends Item 
+public class MortarAndPestleItem extends Item 
 {
 	private final BlockState blockState;
 	
-	public GreatFeastItem(Properties properties) 
+	public MortarAndPestleItem(Properties properties)
 	{
 		super(properties);
-		this.blockState = BlockList.great_feast.getDefaultState();
+		this.blockState = BlockList.mortar_and_pestle.getDefaultState();
 	}
 	
 	/**
-	 * 	Called when we right click with the item
-	 * 	Places out the Great Feast Block
+	 * 	Places out the Mortar and Pestle block
 	 */
 	@Override
 	public ActionResultType onItemUse(ItemUseContext ctx) 

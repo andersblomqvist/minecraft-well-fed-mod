@@ -29,4 +29,9 @@ public class StevesBookOfCooking extends CookeryBook
 		return new ActionResult<>(ActionResultType.SUCCESS, book);
 	}
 	
+	@Override
+	public boolean hasEffect(ItemStack stack) 
+	{
+		return true;
+	}
 }

@@ -9,9 +9,10 @@ import net.minecraft.util.ResourceLocation;
 
 public class GuiCookeryBookPagesList 
 {
-	// Max number of pages for book
-	public static int MAX_PAGES_RECIPE_BOOK = 6;
-	public static int MAX_PAGES_STEVES_BOOK = 2;
+	// Max number of pages for book (not counted from zero)
+	// Change these numbers when adding pages
+	public static int MAX_PAGES_RECIPE_BOOK = 7 + 1;
+	public static int MAX_PAGES_STEVES_BOOK = 4 + 1;
 	
 	// Path to GUI textures
 	public static String RECIPE_BOOK_PATH = "/textures/gui/cookery_book_page_";
@@ -22,16 +23,22 @@ public class GuiCookeryBookPagesList
 	public static List<ResourceLocation> RECIPE_BOOK_PAGES = new ArrayList<ResourceLocation>();
 	public static List<ResourceLocation> STEVES_BOOK_PAGES = new ArrayList<ResourceLocation>();
 	
+	/**
+	 *	Init book pages
+	 */
 	public static void initPages()
 	{
-		fillResourceLocationList(RECIPE_BOOK_PATH, FILE_TYPE, MAX_PAGES_RECIPE_BOOK, RECIPE_BOOK_PAGES);
-		fillResourceLocationList(STEVES_BOOK_PATH, FILE_TYPE, MAX_PAGES_STEVES_BOOK, STEVES_BOOK_PAGES);
+		fillResourceLocationList(RECIPE_BOOK_PATH, FILE_TYPE, 
+				MAX_PAGES_RECIPE_BOOK, RECIPE_BOOK_PAGES);
+		fillResourceLocationList(STEVES_BOOK_PATH, FILE_TYPE, 
+				MAX_PAGES_STEVES_BOOK, STEVES_BOOK_PAGES);
 	}
 	
 	/**
 	 * 	Fills a ResourceLocation list with path to GUI textures.
 	 */
-	private static void fillResourceLocationList(String path, String fileType, int MAX_PAGES, List<ResourceLocation> list)
+	private static void fillResourceLocationList(String path, String fileType, 
+			int MAX_PAGES, List<ResourceLocation> list)
 	{
 		for(int i = 0; i < MAX_PAGES; i++)
 			list.add(new ResourceLocation(WellFedMod.MODID, path + i + fileType));

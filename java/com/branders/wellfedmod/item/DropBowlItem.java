@@ -9,13 +9,24 @@ import net.minecraft.world.World;
 
 public class DropBowlItem extends Item
 {
-	public DropBowlItem(Properties properties) {
+	// This property is set to true for spiced up seafood magifique
+	private boolean hasGlow = false;
+	
+	public DropBowlItem(Properties properties, boolean hasGlow) {
 		super(properties);
+		
+		this.hasGlow = hasGlow;
 	}
 	
 	public ItemStack onItemUseFinish(ItemStack stack, World worldIn, LivingEntity entityLiving) 
 	{
 		((PlayerEntity)entityLiving).inventory.addItemStackToInventory(new ItemStack(Items.BOWL, 1));
 		return super.onItemUseFinish(stack, worldIn, entityLiving);
+	}
+	
+	@Override
+	public boolean hasEffect(ItemStack stack)
+	{
+		return hasGlow;
 	}
 }
