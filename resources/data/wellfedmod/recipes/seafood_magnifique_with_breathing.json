@@ -1,0 +1,14 @@
+{
+  "type": "crafting_shapeless",
+  "ingredients": [
+    {
+        "item": "wellfedmod:seafood_magnifique"
+    },
+    {
+        "item": "wellfedmod:ocean_spices"
+    }
+  ],
+  "result": {
+    "item": "wellfedmod:seafood_magnifique_breath"
+  }
+}

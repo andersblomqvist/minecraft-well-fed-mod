@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "wellfedmod:bat_wing"
+  },
+  "result": "wellfedmod:crispy_bat_wing",
+  "experience": 0.2,
+  "cookingtime": 37
+}

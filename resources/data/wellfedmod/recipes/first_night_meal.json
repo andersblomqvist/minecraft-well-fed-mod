@@ -1,0 +1,20 @@
+{
+  "type": "crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "wellfedmod:forest_spices"
+    },
+    {
+      "item": "wellfedmod:forest_spices"
+    },
+    {
+      "item": "minecraft:apple"
+    },
+    {
+      "item": "minecraft:stick"
+    }
+  ],
+  "result": {
+    "item": "wellfedmod:first_night_meal"
+  }
+}

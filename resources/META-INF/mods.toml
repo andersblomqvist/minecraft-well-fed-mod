@@ -17,7 +17,7 @@ loaderVersion="[27,)" #mandatory (24 is current forge version)
 modId="wellfedmod" #mandatory
 
 # The version number of the mod - there's a few well known ${} variables useable here or just hardcode it
-version="1.2.0" #mandatory
+version="1.3.0" #mandatory
 
  # A display name for the mod
 displayName="Well Fed - quality food!" #mandatory

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "wellfedmod:steves_mining_meal_raw"
+  },
+  "result": "wellfedmod:steves_mining_meal",
+  "experience": 1.5,
+  "cookingtime": 75
+}

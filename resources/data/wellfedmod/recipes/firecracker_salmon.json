@@ -1,0 +1,14 @@
+{
+  "type": "crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "wellfedmod:nether_spices"
+    },
+    {
+      "item": "minecraft:cooked_salmon"
+    }
+  ],
+  "result": {
+    "item": "wellfedmod:firecracker_salmon"
+  }
+}

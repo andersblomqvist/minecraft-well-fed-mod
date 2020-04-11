@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "wellfedmod:squid_limb"
+  },
+  "result": "wellfedmod:grilled_squid_limb",
+  "experience": 0.2,
+  "cookingtime": 37
+}

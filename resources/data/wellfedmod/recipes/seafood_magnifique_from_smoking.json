@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "wellfedmod:uncooked_seafood"
+  },
+  "result": "wellfedmod:seafood_magnifique",
+  "experience": 0.5,
+  "cookingtime": 75
+}

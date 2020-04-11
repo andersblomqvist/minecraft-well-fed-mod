@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "wellfedmod:first_night_meal"
+  },
+  "result": "wellfedmod:first_night_meal_cooked",
+  "experience": 0.2,
+  "cookingtime": 37
+}

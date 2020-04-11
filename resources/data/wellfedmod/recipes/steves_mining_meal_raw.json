@@ -1,0 +1,28 @@
+{
+    "type": "crafting_shaped",
+    "pattern": [
+        "#M#",
+        "BGB",
+        "WWW"
+    ],
+    "key": {
+        "M": {
+            "item": "minecraft:milk_bucket"
+        },
+		"#": {
+            "item": "wellfedmod:forest_spices"
+        },
+        "B": {
+            "item": "minecraft:beef"
+        },
+        "G": {
+            "item": "minecraft:golden_apple"
+        },
+        "W": {
+            "item": "minecraft:bread"
+        }
+    },
+    "result": {
+        "item": "wellfedmod:steves_mining_meal_raw"
+    }
+}

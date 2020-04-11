@@ -1,0 +1,18 @@
+{
+    "type": "crafting_shaped",
+    "pattern": [
+        "CPC",
+        " C "
+    ],
+    "key": {
+        "P": {
+            "item": "wellfedmod:pestle"
+        },
+        "C": {
+            "item": "minecraft:brick"
+        }
+    },
+    "result": {
+        "item": "wellfedmod:mortar_and_pestle_item"
+    }
+}
