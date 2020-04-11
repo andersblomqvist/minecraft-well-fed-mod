@@ -1,0 +1,137 @@
+{
+    "textures": {
+        "cobblestone": "minecraft:block/cobblestone",
+        "cauldron_inner": "minecraft:block/cauldron_inner",
+        "bricks_2": "wellfedmod:block/mortar_and_pestle",
+		"particle": "wellfedmod:block/mortar_and_pestle"
+    },
+    "display": {
+        "gui": {
+            "rotation": [ 30, 45, 0 ],
+            "translation": [ 0, 0, 0 ],
+            "scale": [ 0.625, 0.625, 0.625 ]
+        },
+        "ground": {
+            "rotation": [ 0, 0, 0 ],
+            "translation": [ 0, 3, 0 ],
+            "scale": [ 0.25, 0.25, 0.25 ]
+        },
+        "fixed": {
+            "rotation": [ 0, 180, 0 ],
+            "translation": [ 0, 0, 0 ],
+            "scale": [ 1, 1, 1 ]
+        },
+        "head": {
+            "rotation": [ 0, 180, 0 ],
+            "translation": [ 0, 0, 0 ],
+            "scale": [ 1, 1, 1 ]
+        },
+        "firstperson_righthand": {
+            "rotation": [ 0, 315, 0 ],
+            "translation": [ 0, 2.5, 0 ],
+            "scale": [ 0.4, 0.4, 0.4 ]
+        },
+        "thirdperson_righthand": {
+            "rotation": [ 75, 315, 0 ],
+            "translation": [ 0, 2.5, 0 ],
+            "scale": [ 0.375, 0.375, 0.375 ]
+        }
+    },
+    "elements": [
+        {
+            "name": "bottom",
+            "from": [ 4, 0, 4 ], 
+            "to": [ 12, 2, 12 ], 
+            "faces": {
+                "north": { "texture": "#cauldron_inner", "uv": [ 0, 0, 8, 2 ] },
+                "east": { "texture": "#cauldron_inner", "uv": [ 0, 0, 8, 2 ] },
+                "south": { "texture": "#cauldron_inner", "uv": [ 0, 0, 8, 2 ] },
+                "west": { "texture": "#cauldron_inner", "uv": [ 0, 0, 8, 2 ] },
+                "up": { "texture": "#cauldron_inner", "uv": [ 0, 0, 8, 8 ] },
+                "down": { "texture": "#cauldron_inner", "uv": [ 0, 0, 8, 8 ] }
+            }
+        },
+        {
+            "name": "connector",
+            "from": [ 6, 2, 6 ], 
+            "to": [ 10, 3, 10 ], 
+            "faces": {
+                "north": { "texture": "#cauldron_inner", "uv": [ 0, 0, 4, 1 ] },
+                "east": { "texture": "#cauldron_inner", "uv": [ 0, 0, 4, 1 ] },
+                "south": { "texture": "#cauldron_inner", "uv": [ 0, 0, 4, 1 ] },
+                "west": { "texture": "#cauldron_inner", "uv": [ 0, 0, 4, 1 ] }
+            }
+        },
+        {
+            "name": "top_bottom",
+            "from": [ 5, 3, 5 ], 
+            "to": [ 11, 4, 11 ], 
+            "faces": {
+                "north": { "texture": "#bricks_2", "uv": [ 0, 0, 6, 1 ] },
+                "east": { "texture": "#bricks_2", "uv": [ 0, 0, 6, 1 ] },
+                "south": { "texture": "#bricks_2", "uv": [ 0, 0, 6, 1 ] },
+                "west": { "texture": "#bricks_2", "uv": [ 0, 0, 6, 1 ] },
+                "up": { "texture": "#bricks_2", "uv": [ 0, 0, 6, 6 ] },
+                "down": { "texture": "#bricks_2", "uv": [ 0, 0, 6, 6 ] }
+            }
+        },
+        {
+            "name": "wall_1",
+            "from": [ 6, 4, 10 ], 
+            "to": [ 11, 9, 11 ], 
+            "faces": {
+                "north": { "texture": "#bricks_2", "uv": [ 0, 0, 5, 5 ] },
+                "east": { "texture": "#bricks_2", "uv": [ 0, 0, 1, 5 ] },
+                "south": { "texture": "#bricks_2", "uv": [ 0, 0, 5, 5 ] },
+                "up": { "texture": "#bricks_2", "uv": [ 0, 0, 5, 1 ] }
+            }
+        },
+        {
+            "name": "wall_2",
+            "from": [ 10, 4, 5 ], 
+            "to": [ 11, 9, 10 ], 
+            "faces": {
+                "north": { "texture": "#bricks_2", "uv": [ 0, 0, 1, 5 ] },
+                "east": { "texture": "#bricks_2", "uv": [ 0, 0, 5, 5 ] },
+                "west": { "texture": "#bricks_2", "uv": [ 0, 0, 5, 5 ] },
+                "up": { "texture": "#bricks_2", "uv": [ 0, 0, 1, 5 ] }
+            }
+        },
+        {
+            "name": "wall_3",
+            "from": [ 5, 4, 5 ], 
+            "to": [ 10, 9, 6 ], 
+            "faces": {
+                "north": { "texture": "#bricks_2", "uv": [ 0, 0, 5, 5 ] },
+                "south": { "texture": "#bricks_2", "uv": [ 0, 0, 5, 5 ] },
+                "west": { "texture": "#bricks_2", "uv": [ 0, 0, 1, 5 ] },
+                "up": { "texture": "#bricks_2", "uv": [ 0, 0, 5, 1 ] }
+            }
+        },
+        {
+            "name": "wall_4",
+            "from": [ 5, 4, 6 ], 
+            "to": [ 6, 9, 11 ], 
+            "faces": {
+                "east": { "texture": "#bricks_2", "uv": [ 0, 0, 5, 5 ] },
+                "south": { "texture": "#bricks_2", "uv": [ 0, 0, 1, 5 ] },
+                "west": { "texture": "#bricks_2", "uv": [ 0, 0, 5, 5 ] },
+                "up": { "texture": "#bricks_2", "uv": [ 0, 0, 1, 5 ] }
+            }
+        },
+        {
+            "name": "pestel",
+            "from": [ 7, 6, 7 ], 
+            "to": [ 9, 13, 9 ], 
+            "rotation": { "origin": [ 8, 8, 8 ], "axis": "x", "angle": 45.0 },
+            "faces": {
+                "north": { "texture": "#cobblestone", "uv": [ 0, 0, 2, 7 ] },
+                "east": { "texture": "#cobblestone", "uv": [ 0, 0, 2, 7 ] },
+                "south": { "texture": "#cobblestone", "uv": [ 0, 0, 2, 7 ] },
+                "west": { "texture": "#cobblestone", "uv": [ 0, 0, 2, 7 ] },
+                "up": { "texture": "#cobblestone", "uv": [ 0, 0, 2, 2 ] },
+                "down": { "texture": "#cobblestone", "uv": [ 0, 0, 2, 2 ] }
+            }
+        }
+    ]
+}
